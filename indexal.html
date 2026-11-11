@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رسالة خاصة ل رورتي 🔒</title>
+    <style>
+        :root { --glow-color: #ff4d6d; --bg-gradient: radial-gradient(circle at 50% 50%, #2c0011 0%, #0f0006 100%); }
+        * { box-sizing: border-box; user-select: none; }
+        body { 
+            margin: 0; 
+            padding: 15px; 
+            font-family: 'Segoe UI', Tahoma, sans-serif; 
+            background: var(--bg-gradient); 
+            color: #fff; 
+            min-height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            overflow-x: hidden; 
+        }
+        .glass-card { 
+            z-index: 2; 
+            width: 100%; 
+            max-width: 500px; 
+            padding: 30px 20px; 
+            background: rgba(255, 255, 255, 0.03); 
+            border-radius: 24px; 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            backdrop-filter: blur(25px); 
+            text-align: center; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .lock-header h2 { font-size: 22px; color: #fff; margin: 15px 0; }
+        .heart-glowing { font-size: 45px; display: inline-block; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+        
+        input[type="password"] { 
+            width: 100%; 
+            padding: 14px; 
+            background: rgba(0, 0, 0, 0.4); 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            border-radius: 12px; 
+            color: #fff; 
+            font-size: 16px; 
+            text-align: center; 
+            margin: 20px 0; 
+            outline: none; 
+        }
+        .btn-neon { 
+            width: 100%; 
+            padding: 14px; 
+            background: var(--glow-color); 
+            border: none; 
+            border-radius: 12px; 
+            color: white; 
+            font-weight: 600; 
+            font-size: 16px;
+            cursor: pointer; 
+            transition: 0.3s;
+        }
+        .btn-neon:active { transform: scale(0.98); }
+        
+        #main-content { display: none; }
+        .typing-box { 
+            background: rgba(0,0,0,0.3); 
+            border-radius: 16px; 
+            padding: 20px 15px; 
+            font-size: 15px; 
+            line-height: 1.9; 
+            text-align: right; 
+            border-right: 4px solid var(--glow-color); 
+            max-height: 65vh; 
+            overflow-y: auto; 
+            word-wrap: break-word;
+        }
+        
+        @media (min-width: 768px) {
+            .glass-card { padding: 40px 30px; }
+            .lock-header h2 { font-size: 24px; }
+            .typing-box { font-size: 16px; padding: 25px; max-height: 70vh; }
+        }
+
+        .shake { animation: shake 0.4s; border-color: #ff4d6d !important; }
+        @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-10px); } 75% { transform: translateX(10px); } }
+    </style>
+</head>
+<body>
+
+    <div class="glass-card" id="wrapper-card">
+        <div id="lock-screen">
+            <div class="lock-header">
+                <span class="heart-glowing">🔐</span>
+                <h2> هلووووز رورتي 🌚😁 </h2>
+            </div>
+            <input type="password" id="passField" placeholder="كلمة السر">
+            <button class="btn-neon" onclick="validateAndUnlock()">يلا بينا😁😁</button>
+        </div>
+
+        <div id="main-content">
+            <div class="typing-box">
+                <div id="text-holder"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const secretPass = "Rorty";
+    
+        const fullText = "بخ 🌚❤️\n\nالنهارده 11/11 والساعة 11:11... يوم مميز أهو 😂♥️\n\nفضلت أفكر أفكر أعمل إيه أعمل إيه... واقول اي قولت اعمل ويب سايت ليكي بس   😂❤️ \nعشان آخر مرة كنت عاملهولك ساعة عيد ميلادك فقولت أكرر الفكرة بشكل كريتيف كده 🫣♥️\n\nوقولت إن الفترة دي أكيد مضغوطة وعندك حاجات كتير فحبيت أبعتلك رسالة كده أفكرك بكام حاجة حلوة ❤️\n\nإنك شخص جميل جدا...\nآه والله جميلة 😂♥️\nجميلة بروحك...وبطيبتك...وبضحكتك دي اللي زي العسل 😂✨\n\nالمهم بقى...\nمش معنى إننا مبقيناش نتكلم كتير إن كده أنا أسيبك لوحدك، أو مبقاش أقلق عليكي أو أخاف عليكي...\nلا طبعا 😂❤️\nكل ده لسه موجود بس من بعيد ومن غير ما أضغط عليكي أو أكون تقيل... + انا بطلع بأي حجه عشان اكلمك اصلا انا دوغري 😂🙂🙂\nبس برضو جنبك ومعاكي وفي ضهرك طول الوقت وف اي وقت عموما ❤️🥹\n\nوفخور بيكي اووووي بجد...\nفخور بتعبك وبمجهودك وبكل خطوة بتاخديها وبتكبري فيها ❤️\nعيني لما بتشوفك بتكبري وبتنجحي بتبقى بتلمع بجد 😂🥹♥️\nوعايزك تفتكري دايما إنك مش لوحدك...\nوإنك شطورة وجميلة ومميزة \nوخلي بالك من نفسك كويس...\nدي أهم حاجة عندي بجد 🌷❤️\nبس كده...\nمعلش طولت عليكي 😂🫣\nأحلى رورتي كده كده 😂♥️♥️\nولسه محتفظ بكل حاجة بتاعتك على فكرة 😂♥️♥️\nبحب الذكريات دي أوي 🥹❤️\n\nHappy  11/11 يا جميل 🌚❤️";
+
+        function validateAndUnlock() {
+            const input = document.getElementById('passField');
+            if (input.value === secretPass) {
+                document.getElementById('lock-screen').style.display = "none";
+                document.getElementById('main-content').style.display = "block";
+                typeWriter(0);
+            } else {
+                input.classList.add('shake');
+                setTimeout(() => input.classList.remove('shake'), 400);
+                input.value = "";
+            }
+        }
+
+        function typeWriter(i) {
+            if (i < fullText.length) {
+                document.getElementById('text-holder').innerHTML += fullText.charAt(i) === '\n' ? '<br>' : fullText.charAt(i);
+                setTimeout(() => typeWriter(i + 1), 40);
+            }
+        }
+    </script>
+</body>
+</html>
